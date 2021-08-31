@@ -78,6 +78,26 @@ public class LinkedList {
 		return temporaryNode;
 	}
 	
+	public INode deleteNodeWithKey(int key) {
+		
+		INode nodeWithKeyValue = search(key);
+		
+		if(nodeWithKeyValue != null) {
+			
+			INode temporaryNode = head;
+			while (temporaryNode!=null && temporaryNode.getNext() != nodeWithKeyValue) {
+				temporaryNode = temporaryNode.getNext();
+			}
+			temporaryNode.setNext(nodeWithKeyValue.getNext());
+			return nodeWithKeyValue;
+			
+		}
+		else {
+			System.out.println("Key Node Found");
+			return null;
+		}
+	}
+	
 	public INode search(int key) {
 		INode temporaryNode = head;
 		boolean isFound = false;
