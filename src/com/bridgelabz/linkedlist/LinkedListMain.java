@@ -2,7 +2,7 @@ package com.bridgelabz.linkedlist;
 
 public class LinkedListMain {
 	
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		System.out.println("----- Welcome to Data Structure: Linked List -----");
 		
@@ -16,10 +16,9 @@ public static void main(String[] args) {
 		
 		System.out.println("Linked list before deletion: ");
 		myLinkedList.printLinkedList();
-		INode deletedNode = myLinkedList.deleteFirst();
+		INode deletedNode = myLinkedList.deleteLastNode();
 		System.out.println("The deleted key value is:"+deletedNode.getKey());
-		System.out.println("Final linked list is:");
-		myLinkedList.printLinkedList();
-
+		
+		
 	}
 }
